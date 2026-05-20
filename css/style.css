@@ -240,12 +240,17 @@ utility > utility
   margin: -1px !important;
 }
 
-.u-linebreak-sp {
+.u-linebreak {
+  display: block;
+  margin-bottom: 2em;
+}
+
+.u-linebreak--sp {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .u-linebreak-sp {
-    display: none;
+  .u-linebreak--sp {
+    display: inline;
   }
 }
 
@@ -254,31 +259,55 @@ utility > utility
 component > large-button
 ------------------------------
 */
-.c-large-button {
-  width: 100%;
-  max-width: 280px;
+.c-button {
+  display: block;
+  background-color: var(--color-bg-white);
+  color: var(--color-font-value);
+  width: 250px;
   height: 60px;
+  margin-inline: auto;
+  cursor: pointer;
+  border: solid 1px transparent;
+  transition:
+    background-color 0.6s,
+    border-color 0.6s,
+    color 0.6s;
+}
+@media (any-hover: hover) {
+  .c-button:hover {
+    background-color: var(--color-bg-base);
+    border: solid 1px var(--color-bg-white);
+    color: var(--color-font-white);
+  }
+}
+
+.c-button--large {
+  position: relative;
+  width: 100%;
   display: grid;
   place-items: center;
-  border: solid 1px var(--color-border-white);
+  max-width: 280px;
+  height: 60px;
   margin-inline: auto;
-  position: relative;
-  transition: all 0.6s;
+  border: solid 1px var(--color-border-white);
+  transition:
+    background-color 0.6s,
+    color 0.6s;
 }
 @media screen and (min-width: 768px) {
-  .c-large-button {
+  .c-button--large {
     max-width: 685px;
     height: 90px;
   }
 }
 @media (any-hover: hover) {
-  .c-large-button:hover {
+  .c-button--large:hover {
     background-color: #fff;
-    color: var(--color-bg-base);
+    color: var(--color-font-value);
   }
 }
 
-.c-large-button::after {
+.c-button--large::after {
   content: "";
   background-color: var(--color-border-white);
   width: 40px;
@@ -288,19 +317,19 @@ component > large-button
   right: -25px;
 }
 @media screen and (min-width: 768px) {
-  .c-large-button::after {
+  .c-button--large::after {
     width: 70px;
   }
 }
 
-.c-large-button-text {
+.c-button--large span {
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.2em;
   padding-left: 0.2em;
 }
 @media screen and (min-width: 768px) {
-  .c-large-button-text {
+  .c-button--large span {
     font-size: 32px;
   }
 }
@@ -407,8 +436,8 @@ layout > container
   }
 }
 
-.header-logo-img {
-  display: flex;
+.header-logo img {
+  display: block;
 }
 
 /*!
@@ -427,8 +456,8 @@ layout > container
 .footer-copyright {
   display: block;
   font-size: 12px;
+  line-height: 1;
   font-family: var(--font-family-english);
-  line-height: 0;
   margin-top: 12px;
 }
 @media screen and (min-width: 768px) {
@@ -473,9 +502,9 @@ page > top > kv
   }
 }
 
-.top-kv-text-item,
-.top-kv-text-item02,
-.top-kv-text-item03 {
+.top-kv-role,
+.top-kv-name,
+.top-kv-copy {
   color: var(--color-font-white);
   font-family: var(--font-family-english);
   line-height: 1;
@@ -483,35 +512,34 @@ page > top > kv
   padding-left: 0.4em;
 }
 
-.top-kv-text-item {
+.top-kv-role {
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-text-item {
+  .top-kv-role {
     font-size: 32px;
   }
 }
 
-.top-kv-text-item02 {
+.top-kv-name {
   font-size: 26px;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-text-item02 {
+  .top-kv-name {
     font-size: 46px;
   }
 }
 @media screen and (min-width: 900px) {
-  .top-kv-text-item02 {
+  .top-kv-name {
     font-size: 72px;
   }
 }
 
-.top-kv-text-item03 {
-  font-size: 14px;
+.top-kv-copy {
   letter-spacing: 0.2em;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-text-item03 {
+  .top-kv-copy {
     font-size: 24px;
   }
 }
@@ -520,148 +548,135 @@ page > top > kv
 page > top > profile
 ------------------------------
 */
-.profile-contents-wrapper {
+.top-profile-contents-wrapper {
   display: grid;
   gap: 24px;
 }
 @media screen and (min-width: 768px) {
-  .profile-contents-wrapper {
+  .top-profile-contents-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .profile-text-contents {
-    background-color: var(--color-bg-base-light);
-    padding: 15px;
+  .top-profile-contents-wrapper img {
+    height: 100%;
+    object-fit: cover;
   }
 }
-@media screen and (min-width: 1190px) {
-  .profile-text-contents {
+
+@media screen and (min-width: 768px) {
+  .top-profile-contents {
+    background-color: var(--color-bg-base-light);
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .top-profile-contents {
     padding: 40px;
   }
 }
 
-.profile-text-name-box {
+.top-profile-name {
   display: flex;
   gap: 8px;
   align-items: end;
 }
 @media screen and (min-width: 768px) {
-  .profile-text-name-box {
-    display: flex;
+  .top-profile-name {
     gap: 16px;
   }
 }
 
-.profile-text-name-ja,
-.profile-text-name-en {
+.top-profile-name-ja,
+.top-profile-name-en {
   line-height: 1;
   letter-spacing: 0.2em;
 }
 
-.profile-text-name-ja {
+.top-profile-name-ja {
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
-  .profile-text-name-ja {
+  .top-profile-name-ja {
     font-size: 24px;
   }
 }
 
-.profile-text-name-en {
+.top-profile-name-en {
   font-family: var(--font-family-english);
   font-size: 12px;
 }
 @media screen and (min-width: 768px) {
-  .profile-text-name-en {
+  .top-profile-name-en {
     font-size: 14px;
   }
 }
 
-.profile-text-introduction {
+.top-profile-text {
   margin-top: 16px;
   line-height: 2;
 }
 @media screen and (min-width: 768px) {
-  .profile-text-introduction {
-    font-size: 10.5px;
-  }
-}
-@media screen and (min-width: 960px) {
-  .profile-text-introduction {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .profile-text-introduction {
-    font-size: inherit;
+  .top-profile-text {
     margin-top: 24px;
   }
-}
-
-.profile-text-introduction span {
-  display: block;
-  width: 100%;
-  height: 2em;
 }
 
 /*!
 page > top > products
 ------------------------------
 */
-.products-flexbox-wrapper {
+.top-products-flexbox {
   display: grid;
   gap: 40px;
 }
-@media screen and (min-width: 768px) {
-  .products-flexbox-wrapper {
+@media screen and (min-width: 1024px) {
+  .top-products-flexbox {
     gap: 56px;
   }
 }
 
-.products-flexbox-item {
+.top-products-item {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-@media screen and (min-width: 768px) {
-  .products-flexbox-item {
+@media screen and (min-width: 600px) {
+  .top-products-item {
     flex-direction: initial;
     gap: 64px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .products-flexbox-item--reverse {
+@media screen and (min-width: 600px) {
+  .top-products-item--reverse {
     flex-direction: row-reverse;
   }
 }
 
-.products-item-img {
-  aspect-ratio: 1;
-}
-@media screen and (min-width: 768px) {
-  .products-item-img {
+@media screen and (min-width: 1024px) {
+  .top-products-img {
+    aspect-ratio: 1;
     height: 400px;
   }
 }
 
-.products-item-title {
+.top-products-text h3 {
   font-size: 16px;
   font-family: var(--font-family-english);
   line-height: 1;
   letter-spacing: 0.2em;
 }
-@media screen and (min-width: 768px) {
-  .products-item-title {
+@media screen and (min-width: 1024px) {
+  .top-products-text h3 {
     display: inline-block;
     font-size: 24px;
   }
 }
 
-.products-item-title::after {
+.top-products-text h3::after {
   content: "";
   display: block;
   background-color: var(--color-border-white);
@@ -669,57 +684,51 @@ page > top > products
   width: 100%;
   margin: 11px 0;
 }
-@media screen and (min-width: 768px) {
-  .products-item-title::after {
+@media screen and (min-width: 1024px) {
+  .top-products-text h3::after {
     height: 1px;
     margin: 23px 0;
     width: calc(100% + 6%);
   }
 }
 
-.products-item-description {
+.top-products-text p {
   line-height: 2;
-}
-
-.products-item-description span {
-  display: block;
-  width: 100%;
-  height: 2em;
 }
 
 /*!
 page > top > works
 ------------------------------
 */
-.works-item-main img {
+.top-works-main-item img {
   aspect-ratio: 324 / 182;
   object-fit: cover;
 }
 
-.works-item-others-list {
+.top-works-other-lists {
   display: flex;
   align-items: center;
   gap: 8px;
-  overflow: scroll;
+  overflow-x: auto;
   scrollbar-width: none;
   margin-top: 8px;
 }
 @media screen and (min-width: 768px) {
-  .works-item-others-list {
+  .top-works-other-lists {
     margin-top: 16px;
   }
 }
 
-.works-item-others-list::--webkit-scrollbar {
+.top-works-other-lists::-webkit-scrollbar {
   display: none;
 }
 
-.works-item-others-list-item {
+.top-works-other-lists li img {
   width: 88px;
   height: auto;
 }
 
-.works-instagram-text {
+.top-works-instagram p {
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0;
@@ -728,7 +737,7 @@ page > top > works
   margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
-  .works-instagram-text {
+  .top-works-instagram p {
     font-size: 24px;
     margin-top: 56px;
   }
@@ -737,33 +746,33 @@ page > top > works
 page > top > awards
 ------------------------------
 */
-.awards {
+.top-awards {
   background-color: var(--color-bg-base-light);
 }
 
-.awards-list {
+.top-awards-list {
   display: grid;
   gap: 24px;
 }
 @media screen and (min-width: 768px) {
-  .awards-list {
+  .top-awards-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 }
 
-.awards-list-item {
+.top-awards-list-item {
   display: grid;
   gap: 16px;
   text-align: center;
 }
 
-.awards-title {
+.top-awards-list-item p {
   font-size: 16px;
   line-height: 1;
 }
 @media screen and (min-width: 768px) {
-  .awards-title {
+  .top-awards-list-item p {
     font-size: 18px;
   }
 }
@@ -772,32 +781,36 @@ page > top > awards
 page > top > photo-school
 ------------------------------
 */
-.photo-school-information-wrapper {
+.top-photo-school-information {
   display: grid;
   gap: 20px;
 }
 
-.photo-school-information {
+.top-photo-school-details {
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding-bottom: 19px;
   border-bottom: solid 1px var(--color-border-white);
 }
-@media screen and (min-width: 800px) {
-  .photo-school-information {
+@media screen and (min-width: 768px) {
+  .top-photo-school-details {
     display: grid;
     grid-template-columns: 20% auto;
     gap: 85px;
   }
 }
 
-.photo-school-information-title,
-.photo-school-information-detail {
+.top-photo-school-details dt,
+.top-photo-school-details dd {
   line-height: 2;
 }
 
-.photo-school-registration-text {
+.top-photo-school-target-lists li::before {
+  content: "・";
+}
+
+.top-photo-school-registration p {
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0;
@@ -806,7 +819,7 @@ page > top > photo-school
   margin-bottom: 23px;
 }
 @media screen and (min-width: 768px) {
-  .photo-school-registration-text {
+  .top-photo-school-registration p {
     font-size: 24px;
     margin-top: 55px;
   }
@@ -815,62 +828,45 @@ page > top > photo-school
 page > top > contact
 ------------------------------
 */
-.contact {
+.top-contact {
   background-color: var(--color-bg-base-light);
 }
 
-.contact-form {
+.top-contact-form {
   display: grid;
   gap: 32px;
 }
 
-.contact-form-title {
+.top-contact-form-box span:first-child {
   display: block;
   line-height: 1;
   margin-bottom: 16px;
 }
 
-.contact-form-title::after {
+.top-contact-form-box span:first-child::after {
   content: "必須";
   color: var(--color-font-attention);
   line-height: 1;
   margin-left: 16px;
 }
 
-.contact-form-box input,
-.contact-form-box textarea {
+.top-contact-form-box input,
+.top-contact-form-box textarea {
   color: var(--color-bg-base);
   background-color: var(--color-bg-white);
   width: 100%;
+  padding: 10px;
 }
 
-.contact-form-box input {
+.top-contact-form-box input {
   height: 60px;
 }
 
-.contact-form-box textarea {
+.top-contact-form-box textarea {
   height: 200px;
 }
 @media screen and (min-width: 768px) {
-  .contact-form-box textarea {
+  .top-contact-form-box textarea {
     height: 250px;
-  }
-}
-
-.contact-form-button {
-  display: block;
-  background-color: var(--color-bg-white);
-  color: var(--color-font-value);
-  width: 250px;
-  height: 60px;
-  margin-inline: auto;
-  cursor: pointer;
-  transition: all 0.6s;
-}
-@media (any-hover: hover) {
-  .contact-form-button:hover {
-    background-color: var(--color-bg-base);
-    border: solid 1px var(--color-bg-white);
-    color: var(--color-font-white);
   }
 }
