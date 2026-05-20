@@ -14,15 +14,18 @@
 
     <!-- ogp -->
     <meta property="og:site_name" content="Y.T photo studio" />
-    <meta property="og:url" content="URL(絶対パス)" />
+    <meta property="og:url" content="https://example.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Y.T photo studio" />
-    <meta property="og:description" content="フォトグラファー山田太郎のフォトスタジオ Y.T photo studioのオフィシャルサイトです。" />
-    <meta property="og:image" content="URL(絶対パス)" />
+    <meta property="og:description" content="フォトグラファー山田太郎が運営する Y.T photo studio の公式サイトです。" />
+    <meta property="og:image" content="https://example.com/img/ogp.jpg" />
     <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="フォトグラファー山田太郎のフォトスタジオ Y.T photo studioのオフィシャルサイトです。" />
-    <meta name="twitter:image:src" content="URL(絶対パス)" />
+    <meta name="twitter:title" content="Y.T photo studio" />
+    <meta name="twitter:description" content="フォトグラファー山田太郎が運営する Y.T photo studio の公式サイトです。" />
+    <meta name="twitter:image" content="https://example.com/img/ogp.jpg" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,279 +34,282 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- js -->
-    <script src="js/main.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="header-logo">
+        <div class="header-logo">
             <a href="index.html">
-                <img class="header-logo-img" src="img/logo.svg" width="150" height="16" alt="Y.T PhotoStudioのロゴ">
+                <img src="img/logo.svg" width="150" height="16" alt="Y.T PhotoStudioのロゴ">
             </a>
-        </h1>
+        </div>
     </header>
 
     <main>
         <div class="top-kv">
+            <h1 class="u-visually-hidden">Y.T photo studio</h1>
             <div class="top-kv-text">
-                <p class="top-kv-text-item">photographer</p>
-                <p class="top-kv-text-item02">YAMADA TARO</p>
-                <p class="top-kv-text-item03">photographer</p>
+                <p class="top-kv-role">photographer</p>
+                <p class="top-kv-name">YAMADA TARO</p>
+                <p class="top-kv-copy">capturing moments</p>
             </div>
         </div>
 
-        <section class="profile">
+        <section class="top-profile">
             <div class="l-container l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Profile</p>
                     <h2 class="c-section-title-ja">プロフィール</h2>
-                </div> <!-- c-section-title -->
-                <div class="profile-contents-wrapper l-section-body">
-                    <img class="profile-img" src="img/pic-top-profile.png" width="324" height="204" alt="山田太郎のプロフィール写真">
-                    <div class="profile-text-contents">
-                        <div class="profile-text-name-box">
-                            <p class="profile-text-name-ja">山田 太郎</p>
-                            <p class="profile-text-name-en">YAMADA TARO</p>
-                        </div> <!-- profile-text-name-box -->
-                        <p class="profile-text-introduction">
-                            親譲りの無鉄砲で小供の時から損ばかりしている。
-                            小学校に居る時分学校の二階から飛び降りて一週間
-                            ほど腰を抜かした事がある。なぜそんな無闇をした
-                            と聞く人があるかも知れぬ。
-                            <span></span>
-                            別段深い理由でもない。新築の二階から首を出して
-                            いたら、同級生の一人が冗談に、いくら威張って
-                            も、そこから飛び降りる事は出来まい。弱虫やー
-                            い。
+                </div>
+                <div class="top-profile-contents-wrapper l-section-body">
+                    <img src="img/pic-top-profile.png" width="324" height="204" alt="山田太郎のプロフィール写真">
+                    <div class="top-profile-contents">
+                        <div class="top-profile-name">
+                            <h3 class="top-profile-name-ja">山田 太郎</h3>
+                            <p class="top-profile-name-en">YAMADA TARO</p>
+                        </div>
+                        <p class="top-profile-text">
+                            <span class="u-linebreak">
+                                親譲りの無鉄砲で小供の時から損ばかりしている。
+                                小学校に居る時分学校の二階から飛び降りて一週間
+                                ほど腰を抜かした事がある。なぜそんな無闇をした
+                                と聞く人があるかも知れぬ。
+                            </span>
+                            <span>
+                                別段深い理由でもない。新築の二階から首を出して
+                                いたら、同級生の一人が冗談に、いくら威張って
+                                も、そこから飛び降りる事は出来まい。弱虫やー
+                                い。
+                            </span>
                         </p>
-                    </div> <!-- profile-text-contents -->
-                </div> <!-- profile-contents-wrapper -->
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="products">
+        <section class="top-products">
             <div class="l-container l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Products</p>
                     <h2 class="c-section-title-ja">販売作品集</h2>
-                </div> <!-- section-title -->
-                <div class="products-flexbox-wrapper l-section-body">
-                    <div class="products-flexbox-item products-flexbox-item--reverse">
-                        <div class="products-item-img">
+                </div>
+                <div class="top-products-flexbox l-section-body">
+                    <div class="top-products-item top-products-item--reverse">
+                        <div class="top-products-img">
                             <img src="img/pic-top-products.png" width="324" height="324" alt="Y.T Collection 2020">
                         </div>
-                        <div class="products-item-textbox">
-                            <p class="products-item-title">Y.T Collection 2020</p>
-                            <p class="products-item-description">
-                                親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
-                                <span></span>
-                                新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        <div class="top-products-text">
+                            <h3>Y.T Collection 2020</h3>
+                            <p>
+                                <span class="u-linebreak">
+                                    親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                                </span>
+                                <span>
+                                    新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                                </span>
                             </p>
-                        </div> <!-- products-textbox -->
-                    </div> <!-- products-item(1) -->
-                    <div class="products-flexbox-item">
-                        <div class="products-item-img">
+                        </div>
+                    </div>
+                    <div class="top-products-item">
+                        <div class="top-products-img">
                             <img src="img/pic-top-products02.png" width="324" height="324" alt="Y.T Collection 2019">
                         </div>
-                        <div class="products-item-textbox">
-                            <p class="products-item-title">Y.T Collection 2019</p>
-                            <p class="products-item-description">
-                                親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
-                                <span></span>
-                                新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        <div class="top-products-text">
+                            <h3>Y.T Collection 2019</h3>
+                            <p>
+                                <span class="u-linebreak">
+                                    親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                                </span>
+                                <span>
+                                    新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                                </span>
                             </p>
-                        </div> <!-- products-textbox -->
-                    </div> <!-- products-item(2) -->
-                    <div class="products-flexbox-item products-flexbox-item--reverse">
-                        <div class="products-item-img">
+                        </div>
+                    </div>
+                    <div class="top-products-item top-products-item--reverse">
+                        <div class="top-products-img">
                             <img src="img/pic-top-products03.png" width="324" height="324" alt="Y.T Collection 2018">
                         </div>
-                        <div class="products-item-textbox">
-                            <p class="products-item-title">Y.T Collection 2018</p>
-                            <p class="products-item-description">
-                                親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
-                                <span></span>
-                                新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        <div class="top-products-text">
+                            <h3>Y.T Collection 2018</h3>
+                            <p>
+                                <span class="u-linebreak">
+                                    親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                                </span>
+                                <span>
+                                    新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                                </span>
                             </p>
-                        </div> <!-- products-textbox -->
-                    </div> <!-- products-item(3) -->
-                </div> <!-- products-flexbox-wrapper -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="works">
+        <section class="top-works">
             <div class="l-container-s l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Works</p>
                     <h2 class="c-section-title-ja">作品</h2>
-                </div> <!-- section-title -->
-                <div class="works-item-wrapper l-section-body">
-                    <div class="works-item-main">
+                </div>
+                <div class="top-works-items l-section-body">
+                    <div class="top-works-main-item">
                         <img src="img/pic-top-works-selected.png" width="324" height="182" alt="海と夕暮れのフォト">
-                    </div> <!-- works-item-main -->
-                    <div class="works-item-others-list">
-                        <img src="img/pic-top-works.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="海と夕暮れのフォト">
-                        <img src="img/pic-top-works02.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="森と霧のフォト">
-                        <img src="img/pic-top-works03.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="森と山のフォト">
-                        <img src="img/pic-top-works04.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="雪景色のフォト">
-                        <img src="img/pic-top-works05.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="夜の星空のフォト">
-                        <img src="img/pic-top-works06.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="渓谷のフォト">
-                        <img src="img/pic-top-works07.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="神秘的な空のフォト">
-                        <img src="img/pic-top-works08.png" class="works-item-others-list-item" width="88" height="88"
-                            alt="神秘的なと夕暮れのフォト">
-                    </div> <!-- works-item-others-list -->
-                    <div class="works-instagram-box">
-                        <p class="works-instagram-text">
-                            実績や作品は<span class="u-linebreak-sp"></span>全てInstagramで公開しています
+                    </div>
+                    <ul class="top-works-other-lists">
+                        <li>
+                            <img src="img/pic-top-works.png" class="works-item-others-list-item" width="88" height="88"
+                                alt="海と夕暮れのフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works02.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="森と霧のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works03.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="森と山のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works04.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="雪景色のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works05.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="夜の星空のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works06.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="渓谷のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works07.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="神秘的な空のフォト">
+                        </li>
+                        <li>
+                            <img src="img/pic-top-works08.png" class="works-item-others-list-item" width="88"
+                                height="88" alt="神秘的なと夕暮れのフォト">
+                        </li>
+                    </ul>
+                    <div class="top-works-instagram">
+                        <p>
+                            <span class="u-linebreak--sp">実績や作品は</span><span>全てInstagramで公開しています</span>
                         </p>
-                        <a href="https://www.instagram.com/?hl=ja" class="c-large-button" target="_blank">
-                            <span class="c-large-button-text">Instagramを見る</span>
+                        <a class="c-button--large" href="https://www.instagram.com/?hl=ja" target="_blank"
+                            rel="noopener noreferrer">
+                            <span>Instagramを見る</span>
                         </a>
-                    </div> <!-- works-instagram-box -->
-                </div> <!-- works-item-wrapper -->
-            </div> <!-- l-container-s -->
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="awards">
+        <section class="top-awards">
             <div class="l-container l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Awards</p>
                     <h2 class="c-section-title-ja">受賞した賞</h2>
-                </div> <!-- c-section-title -->
-                <div class="awards-list l-section-body">
-                    <div class="awards-list-item">
+                </div>
+                <div class="top-awards-list l-section-body">
+                    <div class="top-awards-list-item">
                         <img src="img/pic-top-award02.png" width="324" height="188" alt="朝日と雪景色">
-                        <p class="awards-title">第20回 Photo Award</p>
-                    </div> <!-- awards-list-item -->
-                    <div class="awards-list-item">
+                        <p>第20回 Photo Award</p>
+                    </div>
+                    <div class="top-awards-list-item">
                         <img src="img/pic-top-award.png" width="324" height="188" alt="オーロラと雪景色">
-                        <p class="awards-title">第12回 Photo Award</p>
-                    </div> <!-- awards-list-item -->
-                </div> <!-- awards-list -->
-            </div> <!-- l-container -->
+                        <p>第12回 Photo Award</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="photo-school">
+        <section class="top-photo-school">
             <div class="l-container-s l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Photo School</p>
                     <h2 class="c-section-title-ja">写真教室</h2>
-                </div> <!-- c-section-title -->
-                <div class="photo-school-information-wrapper l-section-body">
-                    <dl class="photo-school-information photo-school-information--fee">
-                        <dt class="photo-school-information-title">
-                            受講料
-                        </dt>
-                        <dd class="photo-school-information-detail">
-                            ￥49,000円（税込）
-                        </dd>
+                </div>
+                <div class="top-photo-school-information l-section-body">
+                    <dl class="top-photo-school-details">
+                        <dt>受講料</dt>
+                        <dd>￥49,000円（税込）</dd>
                     </dl>
-                    <dl class="photo-school-information photo-school-information--capacity">
-                        <dt class="photo-school-information-title">
-                            参加人数
-                        </dt>
-                        <dd class="photo-school-information-detail">
-                            1クラス10人まで
-                        </dd>
+                    <dl class="top-photo-school-details">
+                        <dt>参加人数</dt>
+                        <dd>1クラス10人まで</dd>
                     </dl>
-                    <dl class="photo-school-information photo-school-information--lesson">
-                        <dt class="photo-school-information-title">
-                            レッスン日程
-                        </dt>
-                        <dd class="photo-school-information-detail">
-                            毎週土日にレッスンを行います
-                        </dd>
+                    <dl class="top-photo-school-details">
+                        <dt>レッスン日程</dt>
+                        <dd>毎週土日にレッスンを行います</dd>
                     </dl>
-                    <dl class="photo-school-information photo-school-information--target">
-                        <dt class="photo-school-information-title">
-                            こんな方にオススメ
-                        </dt>
-                        <dd class="photo-school-information-detail">
-                            <ul class="photo-school-information--target-list">
-                                <li class="photo-school-information--target-list-item">
-                                    ・カメラを始めたばかり
-                                </li>
-                                <li class="photo-school-information--target-list-item">
-                                    ・カメラの使い方を、一から学びたい方
-                                </li>
-                                <li class="photo-school-information--target-list-item">
-                                    ・良い写真の基準がわからない
-                                </li>
-                                <li class="photo-school-information--target-list-item">
-                                    ・カメラの機能を使いこなせていない
-                                </li>
-                                <li class="photo-school-information--target-list-item">
-                                    ・いつかは賞を取るほどのカメラマンになりたい
-                                </li>
+                    <dl class="top-photo-school-details">
+                        <dt>こんな方にオススメ</dt>
+                        <dd>
+                            <ul class="top-photo-school-target-lists">
+                                <li>カメラを始めたばかり</li>
+                                <li>カメラの使い方を、一から学びたい方</li>
+                                <li>良い写真の基準がわからない</li>
+                                <li>カメラの機能を使いこなせていない</li>
+                                <li>いつかは賞を取るほどのカメラマンになりたい</li>
                             </ul>
                         </dd>
                     </dl>
-                </div> <!-- photo-school-information-wrapper -->
-                <div class="photo-school-registration-box">
-                    <p class="photo-school-registration-text">
-                        まずは無料の体験レッスンに<span class="u-linebreak-sp"></span>ご参加ください
+                </div>
+                <div class="top-photo-school-registration">
+                    <p>
+                        <span class="u-linebreak--sp">まずは無料の体験レッスンに</span><span>ご参加ください</span>
                     </p>
-                    <a href="#" class="c-large-button" target="_blank">
-                        <span class="c-large-button-text">体験レッスンに申し込む</span>
+                    <a href="#contact" class="c-button--large">
+                        <span>体験レッスンに申し込む</span>
                     </a>
-                </div> <!-- photo-school-registration-box -->
-            </div> <!-- l-container-s -->
+                </div>
+            </div>
         </section>
 
-        <section class="contact">
+        <section class="top-contact" id="contact">
             <div class="l-container-s l-section">
                 <div class="c-section-title">
                     <p class="c-section-title-en">Contact</p>
                     <h2 class="c-section-title-ja">お問い合わせ</h2>
-                </div> <!-- c-section-title -->
-                <div class="contact-form-wrapper l-section-body">
-                    <form class="contact-form" action="#" method="post">
-                        <div class="contact-form-box contact-form-box--name">
+                </div>
+                <div class="top-contact-form-wrapper l-section-body">
+                    <form class="top-contact-form" action="#" method="post">
+                        <div class="top-contact-form-box">
                             <label for="name">
-                                <span class="contact-form-title">お名前</span>
-                                <span class="contact-form-details">
+                                <span>お名前</span>
+                                <span>
                                     <input type="text" name="name" id="name" required>
                                 </span>
                             </label>
-                        </div> <!-- contact-form-box -->
-                        <div class="contact-form-box contact-form-box--email">
+                        </div>
+                        <div class="top-contact-form-box">
                             <label for="email">
-                                <span class="contact-form-title">メールアドレス</span>
-                                <span class="contact-form-details">
+                                <span>メールアドレス</span>
+                                <span>
                                     <input type="email" name="email" id="email" required>
                                 </span>
                             </label>
-                        </div> <!-- contact-form-box -->
-                        <div class="contact-form-box contact-form-box--inquiry">
+                        </div>
+                        <div class="top-contact-form-box">
                             <label for="inquiry">
-                                <span class="contact-form-title">お問い合わせ内容</span>
-                                <span class="contact-form-details">
+                                <span>お問い合わせ内容</span>
+                                <span>
                                     <textarea name="inquiry" id="inquiry" required></textarea>
                                 </span>
                             </label>
-                        </div> <!-- contact-form-box -->
-                        <input class="contact-form-button" type="submit" value="送信する" aria-label="送信する">
+                        </div>
+                        <input class="c-button" type="submit" value="送信する" aria-label="送信する">
                     </form>
-                </div> <!-- contact-form-wrapper -->
-            </div> <!-- l-container-s -->
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer-wrapper">
             <div class="footer-logo">
-                <img width="150" height="16" src="img/logo.svg" alt="">
+                <img width="150" height="16" src="img/logo.svg" alt="Y.T photo studioのロゴ">
             </div>
             <small class="footer-copyright">© 2021 Yamada Taro.</small>
-        </div> <!-- footer-wrapper -->
+        </div>
     </footer>
 </body>
 
